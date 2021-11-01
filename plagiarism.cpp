@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstring> 
-#include <md5.h>
+#include "md5.cpp"
 
 using namespace std;
 
