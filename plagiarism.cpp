@@ -118,6 +118,7 @@ std::string md5(const std::string str);
 #include <utility>
 #include <string>
 #include <cstring>
+#include <cmath>
 
 using namespace std;
 
