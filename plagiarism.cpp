@@ -2,6 +2,7 @@
 #include <string>
 #include <cstring> 
 #include "md5.cpp"
+#include "md5.h"
 
 using namespace std;
 
