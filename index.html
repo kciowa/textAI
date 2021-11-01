@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>TextAI</title>
+    <link rel="stylesheet" href="/src/_zeroing.css" />
+    <link rel="stylesheet" href="/src/_normalize.css" />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body>
+    <div id="particles-js" class="particles-js"></div>
+    <header class="header-wrapper">
+      <h1>text.AI</h1>
+      <h2>Intelligent App for text processing</h2>
+    </header>
+    <main class="main-wrapper">
+      <form action="" class="form-controls_original">
+        <div class="controls-original">
+          <button id="open" class="button-original">Original</button>
+          <div id="image" class="img-controls">
+            <img src="/src/main.jpg" alt="brains" style="border-radius: 20px"/>
+            <div id="result" class="opacity"></div>
+          </div>
+        </div>
+        <textarea
+          class="textarea-original"
+          placeholder="Original text"
+          name=""
+          id="info"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </form>
+      <form action="" class="form-controls_check">
+        <div class="controls-check">
+          <button id="send" class="button-check" disabled>Check</button>
+        </div>
+        <textarea
+          class="textarea-check"
+          placeholder="Input text... textarea 2 rows"
+          name=""
+          id="value"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </form>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-logo">
+          <a href="http://devincubator.by/" target="_blank" class="logo">
+            <svg class="icon icon-logo">
+              <use xlink:href="src/icons.svg#Incubator Logo"></use>
+            </svg>
+          </a>
+        </div>
+        <p class="footer-text">Kseniya Dyosheva, Valery Slizh</p>
+        <div class="messengers">
+          <ul class="footer-nav">
+            <li class="footer-li_git">
+              <a href="https://github.com/Fixdii" target="_blank">
+                <svg class="icon icon-messenger">
+                  <use xlink:href="src/icons.svg#git"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-li_vk">
+              <a href="https://vk.com/" target="_blank">
+                <svg class="icon icon-messenger">
+                  <use xlink:href="src/icons.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-li_fb">
+              <a href="https://www.facebook.com/" target="_blank">
+                <svg class="icon icon-messenger">
+                  <use xlink:href="src/icons.svg#fb"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="src/serverRequest.js"></script>
+    <script src="src/particles.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
