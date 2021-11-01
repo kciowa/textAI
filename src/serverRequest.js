@@ -17,6 +17,7 @@ infoTextArea.disabled = true;
 checkTextArea.addEventListener("keyup", (e) => {
   const wordsArray = e.target.value.split(" ").filter( str => str.length > 0 );
   const wordsCounter = wordsArray.length;
+  e.preventDefault();
 
   if (wordsCounter >= MIN_WORDS_COUNT) {
     sendButton.disabled = false;
@@ -33,8 +34,9 @@ checkTextArea.addEventListener("keyup", (e) => {
   }
 });
 
-sendButton.addEventListener("click", async () => {
+sendButton.addEventListener("click", async (e) => {
   const payload = "name=" + encodeURIComponent(checkTextArea.value);
+  e.preventDefault();
   try {
     const response = await fetch(`http://${serverIp}:8080/cgi-bin/script.cgi`, {
         method: "POST",
@@ -44,19 +46,19 @@ sendButton.addEventListener("click", async () => {
     const text = await response.text();
 
     const answerNumber = MAX_PERCENTAGE - parseInt( text.replace(regExp, EMPTY_STRING) );
-    document.querySelector("#opacity").classList.add("opacity");
+    document.querySelector(".img-main").classList.add("opacity");
     document.querySelector("#result").innerHTML = `${answerNumber}% unique`;
   } catch (e) {
     throw new Error(e.message);
   }
 });
 
-openButton.addEventListener("click", async () => {
+openButton.addEventListener("click", async (e) => {
   infoTextArea.innerText = EMPTY_STRING;
+  e.preventDefault();
   try {
     const response = await fetch(`http://${serverIp}:8080/cgi-bin/text.cgi`);
-    const text = await response.text();
-    
+    const text = await response.text();    
     infoTextArea.innerHTML = text;
     infoTextArea.style.color = 'black';
   } catch (e) {
