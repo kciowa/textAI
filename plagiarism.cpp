@@ -423,7 +423,7 @@ int getNewArrSize(string* mas, string text)
         {
             word[wordIterator] = toLowerPtr(text[i]);
             wordIterator++;
-            if (isSeparator(text[i + 1]) or text[i + 1] == '\0')
+            if (isSeparator(text[i + 1]) || text[i + 1] == '\0')
             {
                 word[wordIterator] = '\0';
                 if (!isConjunction(word))
@@ -440,7 +440,7 @@ int getNewArrSize(string* mas, string text)
 
 bool isSeparator(char c)
 {
-    char separatorArr[] = " .,!?;:-+{}()[]*@%$^&#`~_=<>/|'\"\\“”";
+    char separatorArr[] = " \n.,!?;:-+{}()[]*@%$^&#`~_=<>/|'\"\\“”";
 
     for (int i = 0; separatorArr[i] != '\0'; i++)
     {
