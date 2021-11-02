@@ -168,7 +168,7 @@ footer {
     box-sizing: border-box;
     border-radius: 10px;
     margin-bottom: 67px;
-    padding: 0px 46px 0px 34px;
+    padding: 0px 20px 0px 20px;
 
 }
 
@@ -183,7 +183,7 @@ footer {
     text-align: center;
     color: #5C5C5C;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 29px;
 }
 
@@ -275,7 +275,7 @@ footer {
     opacity: 0.6;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 520px) {
 
     h1{
         font-size: 80px;
@@ -287,10 +287,6 @@ footer {
 
     .header-wrapper{
         margin-bottom: 70px;
-    }
-
-    #image{
-        display: none;
     }
 
     .form-controls_original{
@@ -320,6 +316,20 @@ footer {
     .button-check{
         width: 100%;
         margin: 0;
+    }
+
+    #image.img-controls{
+        padding-left: 5%;
+        padding-right: 5%;
+        height: 200px;
+        width: 100%;
+        margin-bottom: 15.73px;
+    }
+
+    img.img-main{
+        
+        width: 90%;
+        height: 100%;
     }
 
     .footer-wrapper{
