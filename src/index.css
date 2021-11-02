@@ -49,8 +49,8 @@ h2 {
 textarea {
     position: relative;
     width: 904px;
-    padding-left: 32px;
-    padding-top: 8px;
+    padding-left: 8px;
+    padding-top: 5px;
     background: #F4F4F4;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: 2px solid #ffffff;
@@ -202,6 +202,7 @@ footer {
 }
 
 ::placeholder {
+    padding-left: 10px;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
