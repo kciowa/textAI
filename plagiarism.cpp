@@ -30,7 +30,7 @@ using std::cout;
 using std::endl;
 using namespace std;
 
-const int N = 5000;
+const int N = 1500;
 
 double antiPlagiarism(string text, string fragment);
 int getNewArrSize(string* mas, string text);
