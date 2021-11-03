@@ -46,6 +46,7 @@ sendButton.addEventListener("click", async (e) => {
     });
     const text = await response.text();
     const answerNumber = MAX_PERCENTAGE - parseInt( text.replace(regExp, EMPTY_STRING) );
+    if(screenWidth <= 670){document.querySelector("#image2").style.display = "flex";}
     document.querySelector(".img-main2").classList.add("opacity"); 
     document.querySelector(".img-main").classList.add("opacity");
     document.querySelector("#result").innerHTML = `${answerNumber}% unique`;
@@ -71,8 +72,6 @@ openButton.addEventListener("click", async (e) => {
 window.addEventListener("resize", function() {
   if (window.matchMedia("(min-width: 670px)").matches) {
     document.querySelector("#image2").style.display = "none";
-  }else{
-    document.querySelector("#image2").style.display = "flex";
   }
 });
 

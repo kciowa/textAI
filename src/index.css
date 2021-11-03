@@ -317,9 +317,9 @@ footer {
         display: none;
     }
 
-    #image2{
+    /* #image2{
         display: none;
-    }
+    } */
 
     .form-controls_original{
         flex-direction: column;
