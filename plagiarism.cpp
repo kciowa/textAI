@@ -407,7 +407,7 @@ double antiPlagiarism(string text, string fragment)
             }
         }
     }
-    double uniquenessPercentage = 100 - (round(((double)overlapCounter / (fragmentSize - 2) * 100) * 100) / 100);
+    double uniquenessPercentage = (round(((double)overlapCounter / (fragmentSize - 2) * 100) * 100) / 100);
     return uniquenessPercentage;
 }
 
