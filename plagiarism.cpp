@@ -403,6 +403,7 @@ double antiPlagiarism(string text, string fragment)
             if (md5(textSelection) == md5(fragmentSelection))
             {
                 overlapCounter++;
+                break;
             }
         }
     }
