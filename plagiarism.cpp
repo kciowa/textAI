@@ -400,7 +400,7 @@ double antiPlagiarism(string text, string fragment)
         for (int k = 0; k < textSize - 2; k++)
         {
             string textSelection = masWordText[k] + masWordText[k + 1] + masWordText[k + 2];
-            if (md5(textSelection) == md5(fragmentSelection))
+            if (textSelection == fragmentSelection)
             {
                 overlapCounter++;
             }
