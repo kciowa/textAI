@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstdio>
 #include <string>
+#include <cmath>
 
 
 #define S11 7
