@@ -36,6 +36,7 @@ checkTextArea.addEventListener("keyup", (e) => {
 
 sendButton.addEventListener("click", async (e) => {
   const payload = "name=" + encodeURIComponent(checkTextArea.value);
+  const screenWidth = window.screen.width;
   e.preventDefault();
   try {
     const response = await fetch(`http://${serverIp}:8080/cgi-bin/script.cgi`, {
@@ -44,10 +45,11 @@ sendButton.addEventListener("click", async (e) => {
         body: payload
     });
     const text = await response.text();
-
     const answerNumber = MAX_PERCENTAGE - parseInt( text.replace(regExp, EMPTY_STRING) );
+    document.querySelector(".img-main2").classList.add("opacity"); 
     document.querySelector(".img-main").classList.add("opacity");
     document.querySelector("#result").innerHTML = `${answerNumber}% unique`;
+    document.querySelector("#result2").innerHTML = `${answerNumber}% unique`;
   } catch (e) {
     throw new Error(e.message);
   }
@@ -63,6 +65,14 @@ openButton.addEventListener("click", async (e) => {
     infoTextArea.style.color = 'black';
   } catch (e) {
     throw new Error(e.message);
+  }
+});
+
+window.addEventListener("resize", function() {
+  if (window.matchMedia("(min-width: 670px)").matches) {
+    document.querySelector("#image2").style.display = "none";
+  }else{
+    document.querySelector("#image2").style.display = "flex";
   }
 });
 
