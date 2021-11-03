@@ -248,7 +248,7 @@ footer {
 #image2{
     display: none;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 60px;
     width: 100%;
 }
 
@@ -317,9 +317,9 @@ footer {
         display: none;
     }
 
-    /* #image2{
-        display: none;
-    } */
+    .main-wrapper {
+        margin-bottom: 80px;
+    }
 
     .form-controls_original{
         flex-direction: column;
