@@ -5,7 +5,6 @@
 #include <iostream>
 #include <cstdio>
 #include <string>
-#include <cmath>
 
 
 #define S11 7
@@ -441,7 +440,7 @@ int getNewArrSize(string* mas, string text)
 
 bool isSeparator(char c)
 {
-    char separatorArr[] = " .,¢!?;:-+{}()[]*@%$^&#`~_=<>/|'\"\\“”";
+    char separatorArr[] = " .\n,\n!\n?\n;\n:\n-\n+\n{\n}\n(\n)\n[\n]\n*\n@\n%\n$\n^\n&\n#\n`\n~\n_\n=\n<\n>\n/\n|\n'\n\"\\n\\n“\n”\n";
 
     for (int i = 0; separatorArr[i] != '\0'; i++)
     {
